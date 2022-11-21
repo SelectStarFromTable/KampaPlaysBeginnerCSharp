@@ -4,24 +4,43 @@
     {
         static void Main(string[] args)
         {
-            PersonGenerator();
+            //PersonGenerator();
+            PersonConsole();
         }
 
         static void PersonGenerator()
         {
-            //TODO create person
-
+            
             List<Person> people = new List<Person>();
 
             people.Add(new Person
             {
-                FirstName = "John",
-                LastName = "Smith"
-            });
+                FirstName = Console.ReadLine()
+                ,LastName = Console.ReadLine()
 
-            string test = people[0].GetFullName();
+            }); ; ;
+            people.ForEach(person => { string fname; fname = person.GetFullName(); Console.WriteLine(fname); });    
+      
+        }
 
-            Console.WriteLine(test);
+        static void PersonConsole()
+        {
+            while(true)
+            {
+                Console.WriteLine("Enter Any Text to Print Person or Exit to Quit");
+                string text = Console.ReadLine();
+                Console.Clear();
+                if (text != "Exit" ) 
+                { 
+                    PersonGenerator(); 
+               
+                     
+                } 
+                else { break; }
+                
+            }
+
+
         }
     }
 }
