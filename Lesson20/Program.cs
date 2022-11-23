@@ -22,10 +22,10 @@
         {
             while (true)
             {
-                Console.WriteLine("Enter Any Text to Print Person or Exit to Quit");
+                Console.WriteLine("Enter any text to create and print a person's name.  Type Exit to quite application");
                 string text = Console.ReadLine();
                 Console.Clear();
-                if (text != "Exit")
+                if (text != "exit" | text != "Exit")
                 {
                     Console.WriteLine("Enter FirstName");
                     string InputFirstName = Console.ReadLine();
@@ -33,7 +33,6 @@
                     Console.WriteLine("Enter LastName");
                     string InputLastName = Console.ReadLine();
                     Console.Clear();
-
                     PersonGenerator(InputFirstName, InputLastName);
 
                 }
