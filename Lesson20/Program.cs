@@ -22,7 +22,7 @@
         {
             while (true)
             {
-                Console.WriteLine("Enter any text to create and print a person's name.  Type Exit to quite application");
+                Console.WriteLine("Enter any text to create and print a person's name.  Type Exit to quit application");
                 string text = Console.ReadLine();
                 Console.Clear();
                 if (text != "exit" | text != "Exit")
