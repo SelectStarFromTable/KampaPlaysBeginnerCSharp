@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Lesson20
+﻿namespace Lesson20
 {
     internal class Program
     {
@@ -13,7 +11,7 @@ namespace Lesson20
         static void PersonGenerator(string FirstName, string LastName)
         {
 
-            List <Person> people = new List<Person>();
+            List<Person> people = new List<Person>();
             people.Add(new Person { FirstName = FirstName, LastName = LastName });
             string FullName = people[0].GetFullName();
             Console.WriteLine(FullName);
@@ -30,13 +28,13 @@ namespace Lesson20
                 if (text != "Exit")
                 {
                     Console.WriteLine("Enter FirstName");
-                    string InputFirstName= Console.ReadLine();
+                    string InputFirstName = Console.ReadLine();
                     Console.Clear();
                     Console.WriteLine("Enter LastName");
-                    string InputLastName= Console.ReadLine();
+                    string InputLastName = Console.ReadLine();
                     Console.Clear();
-                                        
-                    PersonGenerator(InputFirstName,InputLastName);
+
+                    PersonGenerator(InputFirstName, InputLastName);
 
                 }
                 else { break; }
