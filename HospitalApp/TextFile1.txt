@@ -1,12 +1,23 @@
 ﻿Person abstract
+first name
+last name
+get full name (firstname + lastname);
+get all details(getfullname());
+
 
 Staff inherts from Person
+EmpID
+base.get all datails + EmpID
 * Doctor inherts from Staff
+** Speciality 
+** base.get all details() + Speciality;
+
 * Nurse inherts from Staff
 * Maint inherts from Staff
 
 Patient inherts from Person
-
+RoomNumber
+*base.getalldetails() + RoomNumber
 
 Page interface
 * Add to Doctor & Nurse
