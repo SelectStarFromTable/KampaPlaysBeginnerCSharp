@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HospitalApp
 {
-    internal interface Paging
+    internal interface IPaging
     {
+        void Page();
     }
 }

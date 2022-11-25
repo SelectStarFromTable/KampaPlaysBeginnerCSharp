@@ -8,5 +8,6 @@ namespace HospitalApp
 {
     internal class Patient
     {
+        public int RoomNumber { get; set; }
     }
 }

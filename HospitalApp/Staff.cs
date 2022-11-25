@@ -8,5 +8,6 @@ namespace HospitalApp
 {
     internal class Staff
     {
+        public int EmpID { get; set; }
     }
 }
