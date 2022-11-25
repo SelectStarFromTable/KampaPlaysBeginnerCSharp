@@ -1,1 +1,12 @@
-﻿
+﻿Person abstract
+
+Staff inherts from Person
+* Doctor inherts from Staff
+* Nurse inherts from Staff
+* Maint inherts from Staff
+
+Patient inherts from Person
+
+
+Page interface
+* Add to Doctor & Nurse
