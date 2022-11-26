@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace HospitalApp
 {
-    internal class Nurse
+    internal class Nurse : Staff
     {
+        public Nurse(string FirstName, string LastName) : base(FirstName, LastName)
+        {
+        }
     }
 }
