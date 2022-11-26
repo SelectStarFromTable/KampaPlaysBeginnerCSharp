@@ -4,10 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Doctor doctor = new Doctor("David", "Lynch", 1);
+            Doctor doctor = new Doctor("David", "Lynch", 1, "Heart");
             
-            
-            Console.WriteLine("Hello, World!");
+                     
+            Console.WriteLine(doctor.GetDetails());
         }
     }
 }
