@@ -23,10 +23,8 @@ namespace HospitalApp
             return FirstName +  " " + LastName;
         }
 
-        public string GetDetails()
-        {
-            return GetFullName();
-        }
+        public abstract string GetDetails();
+        
 
     }
 }
