@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace HospitalApp
 {
-    internal class Staff
+    internal class Staff : Person
     {
+        public Staff(string FirstName, string LastName) : base(FirstName, LastName)
+        {
+        }
+
         public int EmpID { get; set; }
+
+        public override string GetDetails()
+        {
+            return GetFullName() + EmpID.ToString();
+        }
     }
 }
