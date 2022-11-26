@@ -17,14 +17,20 @@
                 }
                 else
                 {
-                    Doctor doctor = new Doctor("Joe", "Smith", 99, "Lung");
-                    Console.WriteLine(doctor.GetDetails());
-                    doctor.Page();
-                    //Console.WriteLine("Enter FirstName");
-                    //string InputFirstName = Console.ReadLine();
-                    //Console.Clear();
-                    //Console.WriteLine("Enter LastName");
-                    //string InputLastName = Console.ReadLine();
+                    //Doctor doctor = new Doctor("Joe", "Smith", 99, "Lung");
+                    Console.WriteLine("Enter Doctor FirstName");
+                    string InputFirstName = Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine("Enter Doctor LastName");
+                    string InputLastName = Console.ReadLine();
+                    Console.WriteLine("Enter Doctor EmpID");
+                    int InputEmpID = Console.ReadLine();
+                    Console.WriteLine("Enter Doctor Speciality");
+                    string InputSpeciality = Console.ReadLine();
+                    Doctor(InputFirstName, InputLastName, InputEmpID, InputSpeciality);
+                  
+                    Console.WriteLine();
+
                     //Console.Clear(); }
 
                 }
