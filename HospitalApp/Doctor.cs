@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospitalApp
 {
-    internal class Doctor : Staff
+    internal class Doctor : Staff, IPaging
     {
         public Doctor(string FirstName, string LastName) : base(FirstName, LastName)
         {
@@ -17,6 +17,11 @@ namespace HospitalApp
         public override string GetDetails()
         {
             return GetFullName() + EmpID.ToString() + Speciality;
+        }
+
+        public void Page()
+        {
+            Console.WriteLine($"Paging Doctor {this.GetFullName}");
         }
     }
 }
