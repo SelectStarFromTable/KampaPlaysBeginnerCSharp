@@ -8,7 +8,7 @@ namespace HospitalApp
 {
     internal class Maint : Staff
     {
-        public Maint(string FirstName, string LastName) : base(FirstName, LastName)
+        public Maint(string FirstName, string LastName, int EmpID) : base(FirstName, LastName, EmpID)
         {
         }
     }
