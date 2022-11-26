@@ -8,8 +8,9 @@ namespace HospitalApp
 {
     internal class Staff : Person
     {
-        public Staff(string FirstName, string LastName) : base(FirstName, LastName)
+        public Staff(string FirstName, string LastName, int EmpID) : base(FirstName, LastName)
         {
+            this.EmpID = EmpID;
         }
 
         public int EmpID { get; set; }

@@ -8,7 +8,7 @@ namespace HospitalApp
 {
     internal class Doctor : Staff, IPaging
     {
-        public Doctor(string FirstName, string LastName) : base(FirstName, LastName)
+        public Doctor(string FirstName, string LastName, int EmpID) : base(FirstName, LastName, EmpID)
         {
         }
 
