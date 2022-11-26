@@ -23,7 +23,7 @@ namespace HospitalApp
 
         public void Page()
         {
-            Console.WriteLine($"Paging Doctor {this.GetFullName}");
+            Console.WriteLine($"Paging {this.Speciality} Specialist, Doctor {base.GetFullName()}");
         }
     }
 }
