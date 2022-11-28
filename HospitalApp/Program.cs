@@ -28,7 +28,6 @@
                     Console.WriteLine("Enter Doctor Speciality");
                     string InputSpeciality = Console.ReadLine();
                     Doctor NewDoctor = new Doctor(InputFirstName, InputLastName, InputEmpID, InputSpeciality);
-
                     Console.WriteLine(NewDoctor.GetFullName());
 
                     //Console.Clear(); }
