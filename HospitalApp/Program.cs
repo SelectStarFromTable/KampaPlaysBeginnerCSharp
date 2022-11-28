@@ -28,6 +28,7 @@
                     Console.WriteLine("Enter Doctor Speciality");
                     string InputSpeciality = Console.ReadLine();
                     doctors.Add(new Doctor(InputFirstName, InputLastName, InputEmpID, InputSpeciality));
+                    doctors.ForEach(doctor => { Console.WriteLine(doctor.GetDetails()); });
                     //Console.WriteLine(NewDoctor.GetFullName());
                     //Console.Clear(); }
 
