@@ -1,4 +1,6 @@
-﻿namespace HospitalApp
+﻿using System.Collections.Immutable;
+
+namespace HospitalApp
 {
     internal class Program
     {
@@ -23,14 +25,14 @@
                     Console.Clear();
                     Console.WriteLine("Enter Doctor LastName");
                     string InputLastName = Console.ReadLine();
-                    Console.WriteLine("Enter Doctor EmpID");
-                    int InputEmpID = Console.ReadLine();
+                    Console.WriteLine("Enter Doctor EmpID"); 
+                    int InputEmpID = int.Parse(Console.ReadLine());
                     Console.WriteLine("Enter Doctor Speciality");
                     string InputSpeciality = Console.ReadLine();
-                    Doctor(InputFirstName, InputLastName, InputEmpID, InputSpeciality);
+                    //Doctor(InputFirstName, InputLastName, InputEmpID, InputSpeciality);
                   
                     Console.WriteLine();
-
+                    
                     //Console.Clear(); }
 
                 }
