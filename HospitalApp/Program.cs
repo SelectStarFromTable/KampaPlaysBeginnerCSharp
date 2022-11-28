@@ -2,9 +2,10 @@
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
-
+            List<Doctor> doctors = new List<Doctor>();
             while (true)
             {
                 Console.WriteLine("Enter any key to Continue. Type Exit to quit application");
@@ -17,7 +18,6 @@
                 }
                 else
                 {
-                    //Doctor doctor = new Doctor("Joe", "Smith", 99, "Lung");
                     Console.WriteLine("Enter Doctor FirstName");
                     string InputFirstName = Console.ReadLine();
                     Console.Clear();
@@ -27,9 +27,8 @@
                     int InputEmpID = int.Parse(Console.ReadLine());
                     Console.WriteLine("Enter Doctor Speciality");
                     string InputSpeciality = Console.ReadLine();
-                    Doctor NewDoctor = new Doctor(InputFirstName, InputLastName, InputEmpID, InputSpeciality);
-                    Console.WriteLine(NewDoctor.GetFullName());
-
+                    doctors.Add(new Doctor(InputFirstName, InputLastName, InputEmpID, InputSpeciality));
+                    //Console.WriteLine(NewDoctor.GetFullName());
                     //Console.Clear(); }
 
                 }
