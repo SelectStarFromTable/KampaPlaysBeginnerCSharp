@@ -18,9 +18,7 @@
                 }
                 else
                 {
-
-                    InputDoctor();  
-
+                    InputDoctor();
                 }
 
             }
@@ -36,9 +34,16 @@
                 int? InputEmpID = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter Doctor Speciality");
                 string? InputSpeciality = Console.ReadLine();
-                Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
+                Doctor TempDoc = new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality);
+                File.AppendAllText("c:\\test\\test.txt", TempDoc.GetDetails() + "\n");
+                Doctors.Add(TempDoc);
+                //Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
                 Doctors.ForEach(doctor => { Console.WriteLine(doctor.GetDetails()); });
             };
+
+            
+
+            
         
         
         
