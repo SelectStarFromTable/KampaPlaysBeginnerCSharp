@@ -39,6 +39,7 @@
                 Doctors.Add(TempDoc);
                 //Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
                 Doctors.ForEach(doctor => { Console.WriteLine(doctor.GetDetails()); });
+                //TODO add logic to import data from file into Doctors list
             };
 
             
