@@ -8,6 +8,7 @@
             var Doctors = new List<Doctor>();
             while (true)
             {
+                //TODO: Create Menu to select different things to add 1-4 etc.
                 Console.WriteLine("Enter any key to Continue. Type Exit to quit application");
                 string text = Console.ReadLine();
                 Console.Clear();
