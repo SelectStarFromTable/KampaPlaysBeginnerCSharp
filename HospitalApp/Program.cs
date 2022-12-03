@@ -36,10 +36,9 @@
                 Console.WriteLine("Enter Doctor Speciality");
                 string? InputSpeciality = Console.ReadLine();
                 Doctor TempDoc = new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality);
-                File.AppendAllText("c:\\test\\test.txt", TempDoc.GetDetails() + "\n");
+                File.AppendAllText("c:\\test\\test.txt", WriteFileDoctor(TempDoc));
                 Doctors.Add(TempDoc);
                 //Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
-                //Doctors.ForEach(doctor => { Console.WriteLine(doctor.GetDetails()); });
                 Doctors.ForEach(doctor =>
                 {
                     Console.WriteLine(doctor.FirstName);
@@ -50,6 +49,12 @@
                 //TODO add logic to import data from file into Doctors list
             };
 
+            string WriteFileDoctor(Doctor doctor)
+            {
+                return
+                doctor.FirstName + "\n" + doctor.LastName + "\n" +
+                doctor.EmpID + "\n" + doctor.Speciality;
+            }
 
 
 
