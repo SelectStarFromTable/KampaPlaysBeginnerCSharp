@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        
+
         static void Main(string[] args)
         {
             var Doctors = new List<Doctor>();
@@ -39,16 +39,23 @@
                 File.AppendAllText("c:\\test\\test.txt", TempDoc.GetDetails() + "\n");
                 Doctors.Add(TempDoc);
                 //Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
-                Doctors.ForEach(doctor => { Console.WriteLine(doctor.GetDetails()); });
+                //Doctors.ForEach(doctor => { Console.WriteLine(doctor.GetDetails()); });
+                Doctors.ForEach(doctor =>
+                {
+                    Console.WriteLine(doctor.FirstName);
+                    Console.WriteLine(doctor.LastName);
+                    Console.WriteLine(doctor.EmpID);
+                    Console.WriteLine(doctor.Speciality);
+                });
                 //TODO add logic to import data from file into Doctors list
             };
 
-            
 
-            
-        
-        
-        
+
+
+
+
+
         }
     }
 }
