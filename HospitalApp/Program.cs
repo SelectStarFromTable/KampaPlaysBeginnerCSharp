@@ -53,7 +53,7 @@
             {
                 return
                 doctor.FirstName + "\n" + doctor.LastName + "\n" +
-                doctor.EmpID + "\n" + doctor.Speciality + ;
+                doctor.EmpID + "\n" + doctor.Speciality + "\n";
             }
 
 
