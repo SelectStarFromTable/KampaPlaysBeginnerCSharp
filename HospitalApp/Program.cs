@@ -36,11 +36,11 @@
                 Console.WriteLine("Enter Doctor Speciality");
                 string? InputSpeciality = Console.ReadLine();
                 Doctor TempDoc = new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality);
-                Doctors.Add(TempDoc);
                 File.AppendAllText("c:\\test\\test.txt", WriteFileDoctor(TempDoc));
-                Console.WriteLine(TempDoc.GetDetails());
+                Console.WriteLine(TempDoc.GetDetails() + "added to the file system.");
+                //Doctors.Add(TempDoc);  // not going to add doc to list from UI - goign to write to file and then input to list from file
                 //Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
-                WriteToConsoleAllDoctors();
+                //WriteToConsoleAllDoctors();
                 //TODO add logic to import data from file into Doctors list
             };
 
