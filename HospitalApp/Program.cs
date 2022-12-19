@@ -43,7 +43,7 @@ namespace HospitalApp
                 ReadFileDoctor("c:\\test\\test.txt");
                 //Doctors.Add(TempDoc);  // not going to add doc to list from UI - goign to write to file and then input to list from file
                 //Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
-                //WriteToConsoleAllDoctors();
+                WriteToConsoleAllDoctors();
                 //TODO add logic to import data from file into Doctors list
             };
 
@@ -72,7 +72,7 @@ namespace HospitalApp
                 {
                     string[] newLine = line.Split(',');
                     Doctor doctor = new Doctor(newLine[1], newLine[2], System.Convert.ToInt16(newLine[0]), newLine[3]);
-                    Console.WriteLine(line);
+                    Doctors.Add(doctor);
                 }
 
                 
