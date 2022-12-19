@@ -1,4 +1,6 @@
-﻿namespace HospitalApp
+﻿using System.Xml;
+
+namespace HospitalApp
 {
     internal class Program
     {
@@ -37,7 +39,8 @@
                 string? InputSpeciality = Console.ReadLine();
                 Doctor TempDoc = new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality);
                 File.AppendAllText("c:\\test\\test.txt", WriteFileDoctor(TempDoc));
-                Console.WriteLine(TempDoc.GetDetails() + "added to the file system.");
+                Console.WriteLine(TempDoc.GetDetails() + " added to the file system.");
+                ReadFileDoctor("c:\\test\\test.txt");
                 //Doctors.Add(TempDoc);  // not going to add doc to list from UI - goign to write to file and then input to list from file
                 //Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
                 //WriteToConsoleAllDoctors();
@@ -61,19 +64,20 @@
                 });
             }
 
-            string ReadFileDoctor(string filename)
+            void ReadFileDoctor(string filename)
             {
                 var lines = File.ReadLines(filename);
-                lines.ForEach(line =>
+                //lines.ForEach(line => { Console.WriteLine(line); });
+                foreach (var line in lines)
                 {
-                    line = line.Split(',');
-                    //Doctor doctor = new Doctor(line);
-                });
-                return "";
+                    string[] newLine = line.Split(',');
+                    Doctor doctor = new Doctor(newLine[1], newLine[2], System.Convert.ToInt16(newLine[0]), newLine[3]);
+                    Console.WriteLine(line);
+                }
+
+                
+
             }
-
-
-
         }
     }
 }
