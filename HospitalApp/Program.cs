@@ -47,17 +47,16 @@
             string WriteFileDoctor(Doctor doctor)
             {
                 return
-                doctor.FirstName + "\n" + doctor.LastName + "\n" +
-                doctor.EmpID + "\n" + doctor.Speciality + "\n";
+                doctor.EmpID.ToString() + ',' + doctor.FirstName + ',' + doctor.LastName + ',' + doctor.Speciality + "\n";
             }
 
             void WriteToConsoleAllDoctors()
             {
                 Doctors.ForEach(doctor =>
                 {
+                    Console.WriteLine(doctor.EmpID);
                     Console.WriteLine(doctor.FirstName);
                     Console.WriteLine(doctor.LastName);
-                    Console.WriteLine(doctor.EmpID);
                     Console.WriteLine(doctor.Speciality);
                 });
             }
