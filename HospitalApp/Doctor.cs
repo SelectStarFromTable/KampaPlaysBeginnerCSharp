@@ -18,7 +18,7 @@ namespace HospitalApp
 
         public override string GetDetails()
         {
-            return GetFullName() + "\n" + EmpID.ToString() + "\n" + Speciality;
+            return EmpID.ToString() + GetFullName() + Speciality + "\n";
         }
 
         public void Page()

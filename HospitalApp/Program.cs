@@ -61,6 +61,16 @@
                 });
             }
 
+            string ReadFileDoctor(string filename)
+            {
+                var lines = File.ReadLines(filename);
+                lines.ForEach(line =>
+                {
+                    line = line.Split(',');
+                    //Doctor doctor = new Doctor(line);
+                });
+                return "";
+            }
 
 
 
