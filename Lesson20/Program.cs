@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            //PersonGenerator();
+            // PersonGenerator();
             PersonConsole();
         }
 
