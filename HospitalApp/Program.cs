@@ -41,7 +41,7 @@ namespace HospitalApp
                 File.AppendAllText("c:\\test\\test.txt", WriteFileDoctor(TempDoc));
                 Console.WriteLine(TempDoc.GetDetails() + " added to the file system.");
                 ReadFileDoctor("c:\\test\\test.txt");
-                //Doctors.Add(TempDoc);  // not going to add doc to list from UI - goign to write to file and then input to list from file
+                //Doctors.Add(TempDoc);  // not going to add doc to list from UI - going to write to file and then input to list from file
                 //Doctors.Add(new Doctor(InputFirstName, InputLastName, (int)InputEmpID, InputSpeciality));
                 WriteToConsoleAllDoctors();
                 //TODO add logic to import data from file into Doctors list
